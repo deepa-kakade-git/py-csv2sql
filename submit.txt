@@ -1,0 +1,42 @@
+mysql> use data5zero
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++---------------------+
+| Tables_in_data5zero |
++---------------------+
+| book                |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> describe book;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| book_id    | int          | NO   | PRI | NULL    | auto_increment |
+| first_name | varchar(64)  | YES  |     | NULL    |                |
+| last_name  | varchar(64)  | YES  |     | NULL    |                |
+| title      | varchar(255) | YES  |     | NULL    |                |
+| publisher  | varchar(255) | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> select * from book;
++---------+------------+-------------+-----------------------------------------------------+----------------------+
+| book_id | first_name | last_name   | title                                               | publisher            |
++---------+------------+-------------+-----------------------------------------------------+----------------------+
+|       1 | Isaac      | Asimov      | Foundation                                          | Random House         |
+|       2 | Pearl      | Buck        | The Good Earth                                      | Random House         |
+|       3 | Tom        | Clancy      | The Hunt For Red October                            | Berkley              |
+|       4 | Tom        | Clancy      | Patriot Games                                       | Simon & Schuster     |
+|       5 | Stephen    | King        | It                                                  | Random House         |
+|       6 | Stephen    | King        | Dead Zone                                           | Random House         |
+|       7 | Stephen    | King        | The Shining                                         | Penguin Random House |
+|       8 | John       | Le Carre    | Tinker, Tailor, Soldier, Spy: A George Smiley Novel | Berkley              |
+|       9 | Alex       | Michaelides | The Silent Patient                                  | Simon & Schuster     |
+|      10 | Carol      | Shaben      | Into The Abyss                                      | Simon & Schuster     |
++---------+------------+-------------+-----------------------------------------------------+----------------------+
+10 rows in set (0.01 sec)
+

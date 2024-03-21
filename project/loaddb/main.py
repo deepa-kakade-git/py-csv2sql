@@ -66,7 +66,7 @@ def main():
 
     # create the database
     # engine = create_engine(f"sqlite:///{sqlite_filepath}")
-    engine = create_engine("mysql+mysqldb://kris:britta@localhost/data5zero")
+    engine = create_engine("mysql+mysqldb://root:deep7573_mysql@localhost/data5zero")
 
     Base.metadata.create_all(engine)
     Session = sessionmaker()
